@@ -141,4 +141,4 @@ class Dataset:
         return temp
 
     def save_metadata(self, path):
-        np.save("{}/meta_dataset".format(path), np.array([self.input_shape, self.output_size, self.size]))
+        np.savez("{}/meta_dataset.npz".format(path), input_shape=self.input_shape, output_size=self.output_size, size=self.size)

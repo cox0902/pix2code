@@ -22,9 +22,9 @@ else:
     output_path = argv[3]
     search_method = "greedy" if len(argv) < 5 else argv[4]
 
-meta_dataset = np.load("{}/meta_dataset.npy".format(trained_weights_path))
-input_shape = meta_dataset[0]
-output_size = meta_dataset[1]
+meta_dataset = np.load("{}/meta_dataset.npz".format(trained_weights_path))
+input_shape = meta_dataset['input_shape']
+output_size = meta_dataset['output_size']
 
 model = pix2code(input_shape, output_size, trained_weights_path)
 model.load(trained_model_name)
