@@ -5,7 +5,7 @@ __author__ = 'Tony Beltramelli - www.tonybeltramelli.com'
 
 import tensorflow as tf
 
-sess = tf.compat.v1.Session(config=tf.ConfigProto(log_device_placement=True))
+sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(log_device_placement=True))
 
 import sys
 
